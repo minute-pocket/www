@@ -16,17 +16,45 @@
                 <div class="one-half column">
                     <img src="http://demo.graygrids.com/themes/corporal/assets/img/hero/macbook.png" alt="Preview of what you'll get if you rox enough :)" class="u-max-full-width" />
                 </div>
-                <div class="one-half column">
-                    <div class="description">
-                        <p></p>
-                        <p>
-                            <span class="tag">2 minutes</span> <span class="tag">5 minutes</span> <span class="tag">10 minutes</span> <span class="tag">15 minutes</span><br />
-                            <br />
-                            And up to <em>"60+ minutes"</em>.
-                        </p>
+                <div class="one-half column" id="raccoon">
+                    <div class="intro">
+                        <div class="description">
+                            <p></p>
+                            <p>
+                                <span class="tag">2 minutes</span> <span class="tag">5 minutes</span> <span class="tag">10 minutes</span> <span class="tag">15 minutes</span><br />
+                                <br />
+                                And up to <em>"60+ minutes"</em>.
+                            </p>
+                        </div>
+                        <div class="action">
+                            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="pocket-btn"><img src="https://getpocket.com/i/apple-touch-icon/Pocket_AppIcon_144.png" height="24" /> Connect to Pocket</a>
+                        </div>
                     </div>
-                    <div class="action">
-                        <a href="" title="Click here to connect your account to Pocket" class="pocket-btn"><img src="https://getpocket.com/i/apple-touch-icon/Pocket_AppIcon_144.png" height="24" /> Connect to Pocket</a>
+                    <div class="unauthorized">
+                        <p class="error">An error occured while trying to connect to Pocket.</p>
+                        <div class="action">
+                            <p>Want to try again?</p>
+                            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="pocket-btn"><img src="https://getpocket.com/i/apple-touch-icon/Pocket_AppIcon_144.png" height="24" /> Connect to Pocket</a>
+                        </div>
+                    </div>
+                    <div class="authorized">
+                        <h3>Awesome, <span>user</span>!</h3>
+                        <form method="post" action="https://minute-pocket.appspot.com/connect">
+                            <div>
+                                <label for="form-email">Please indicate your email</label>
+                                <input type="email" name="email" placeholder="i-am-awesome@best.org" class="u-full-width" id="form-email" required focus />
+                                <p class="help-block">We will send you an email once the processing is complete.</p>
+                                <p class="error" style="display:none; margin-bottom: 20px">Please indicate a valid email.</p>
+                            </div>
+                            <div>
+                                <input class="pocket-btn" type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="processing">
+                        <h3>Sweeeeeeet, it's queued!</h3>
+                        <p>Awesome! Thank you!</p>
+                        <p>We will start processing your list soon, and will notify you with an email once it's done!</p>
                     </div>
                 </div>
             </div>
@@ -38,5 +66,7 @@
                 The API only uses <em>GET</em> and <em>SEND</em> (with action "tags_add"), that's all. No deletion is made.
             </small></p>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="./general.js"></script>
     </body>
 </html>
