@@ -1,31 +1,41 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+.hide {
+    display: none;
+}
 body {
-    color: #fff;
-    font-family: 'Montserrat', Roboto, sans-serif;
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1;
-    background-color: #34495e;
-    text-align: center
-}
-
-#maincoon h1 {
-    margin: 100px 0 150px;
-}
-
-#maincoon>div {
-    display: flex;
-    justify-content: center;
     text-align: center;
-    align-self: center;
-    align-items: center;
+    background: #EF4056;
 }
-
-#raccoon>div {display: none}
-
+header {
+    background: #fff;
+    padding: 60px 0 130px 0;
+}
+header:before {
+    content: "";
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: -500px;
+    height: 500px;
+}
 p.error {
     color: #721c24;
     background-color: #f8d7da;
@@ -35,92 +45,136 @@ p.error {
     border: 1px solid #f5c6cb;
     border-radius: .25rem;
 }
-
-.unauthorized>div {margin-top: 20px}
-
-.authorized, .processing {text-align: left}
-.authorized h3 {margin-bottom: 40px}
-
-.authorized .pocket-btn {width: 100%}
-
 .container {
-    width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    max-width: 960px;
 }
-
-span.tag {
-    background-color: #eee;
-    color: #666666;
-    padding: 5px 10px;
-    display: inline-block;
-    text-shadow: 1px 1px 1px #fff;
-    border-radius: 3px;
-    margin: 0 2px;
-}
-
-.pocket-logo {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 0 7px 0 0;
-    background-color: #fbfbfb;
-    border-radius: 5px;
-    color: #444
-}
-
-.pocket-logo img {
-    vertical-align: middle;
-}
-
-.pocket-btn {
-	background-repeat: repeat-x;
-	background-color: #d3505a !important;
-	background-image: -moz-linear-gradient(top,#ee5f64 0,#d3505a 100%) !important;
-	background-image: -webkit-gradient(left top,left bottom,color-stop(0,#ee5f64),color-stop(100%,#d3505a)) !important;
-	background-image: -webkit-linear-gradient(top,#ee5f64 0,#d3505a 100%) !important;
-	background-image: -o-linear-gradient(top,#ee5f64 0,#d3505a 100%) !important;
-	background-image: -ms-linear-gradient(top,#ee5f64 0,#d3505a 100%) !important;
-	background-image: linear-gradient(to bottom,#ee5f64 0,#d3505a 100%) !important;
-	border: 1px solid #D13644;
-	border-radius: 4px !important;
-	box-shadow: inset 0 1px 1px rgba(255,255,255,.4);
-	color: #fff !important;
-	display: inline-block;
-	font-size: 16px !important;
-	font-weight: 700 !important;
-	line-height: 1 !important;
-	margin: 0;
-	padding: 11px 45px !important;
-	text-align: center !important;
-    text-transform: none  !important;
-	text-decoration: none !important;
-	text-shadow: 0 -1px 0 rgba(142,4,17,.5) !important;
-	transition: background-position .1s linear !important;
-	width: auto;
-}
-
-.pocket-btn img {
-    vertical-align: middle
-}
-
-.pocket-btn:hover {
-    color: #fff;
-    text-decoration: none;
-    background-position: 0 -15px;
-}
-
-.pocket-btn:active, .pocket-btn:focus {
-    background-image: none;
-    color: #fff;
-    outline: 0;
-    text-decoration: none;
-    box-shadow: inset 0 0 6px rgba(0,0,0,.15);
-}
-
-footer.container {
-    margin-top: 50px;
-    line-height:1.5em
-}
-
-footer strong {
+.logo {
     display: block;
-    margin-top: 10px;
+    margin: 0 auto 60px auto;
+}
+.visual {
+    padding-bottom: 50px;
+    position: relative;
+}
+.visual img {
+    width: 100%;
+    max-width: 814px;
+    margin-top: -50px;
+}
+h1 {
+    font-size: 50px;
+    color: #0F172A;
+    line-height: 60px;
+    font-weight: 100;
+    margin: 0 0 20px 0;
+}
+p {
+    display: inline-block;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 20px;
+    color: #666;
+    font-size: 14px;
+}
+.button {
+    clear: both;
+    float: none;
+    display: block;
+    text-align: center;
+    color: #fff;
+    background: #EF4056;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    width: 200px;
+    margin: 40px auto 0 auto;
+}
+.tag__wrapper {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: #333;
+}
+.tag__wrapper .tag {
+    background: #fff;
+    font-size: 12px;
+    display: inline-block;
+    padding: 7px 15px;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2)
+}
+.tag.tag--big {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+#tag__topleft {
+    top: 80px;
+    left: 0px;
+}
+#tag__topleft:before {
+    content: "";
+    width: 50px;
+    background: #DA3146;
+    height: 7px;
+    position: absolute;
+    top: 80px;
+    border-radius: 20px;
+    left: -90px;
+}
+#tag__topleft:after {
+    content: "";
+    width: 60px;
+    background: #DA3146;
+    height: 12px;
+    position: absolute;
+    top: 200px;
+    border-radius: 15px;
+    left: 0px;
+}
+#tag__topright {
+    right: 120px;
+    top: 65px;
+}
+#tag__bottomleft {
+    top: 200px;
+    left: 90px;
+}
+#tag__bottomright {
+    right: 54px;
+    top: 200px;
+}
+#tag__topright:before {
+    content: "";
+    width: 50px;
+    background: #DA3146;
+    height: 7px;
+    position: absolute;
+    top: 40px;
+    border-radius: 20px;
+    right: -150px;
+}
+#tag__topright:after {
+    content: "";
+    width: 40px;
+    background: #DA3146;
+    height: 10px;
+    position: absolute;
+    top: 250px;
+    border-radius: 15px;
+    right: -90px;
+}
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
 }

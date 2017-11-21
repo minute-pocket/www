@@ -1,72 +1,67 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Hello Pocket Readers!</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="general.css" />
-    </head>
-    <body>
-        <div id="maincoon" class="container">
-            <h1>Tag your <span class="pocket-logo"><img src="https://getpocket.com/i/apple-touch-icon/Pocket_AppIcon_144.png" height="24" /> Pocket</span> items with estimated reading time</h1>
-            <div class="row">
-                <div class="one-half column">
-                    <img src="http://demo.graygrids.com/themes/corporal/assets/img/hero/macbook.png" alt="Preview of what you'll get if you rox enough :)" class="u-max-full-width" />
-                </div>
-                <div class="one-half column" id="raccoon">
-                    <div class="intro">
-                        <div class="description">
-                            <p></p>
-                            <p>
-                                <span class="tag">2 minutes</span> <span class="tag">5 minutes</span> <span class="tag">10 minutes</span> <span class="tag">15 minutes</span><br />
-                                <br />
-                                And up to <em>"60+ minutes"</em>.
-                            </p>
-                        </div>
-                        <div class="action">
-                            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="pocket-btn"><img src="https://getpocket.com/i/apple-touch-icon/Pocket_AppIcon_144.png" height="24" /> Connect to Pocket</a>
-                        </div>
-                    </div>
-                    <div class="unauthorized">
-                        <p class="error">An error occured while trying to connect to Pocket.</p>
-                        <div class="action">
-                            <p>Want to try again?</p>
-                            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="pocket-btn"><img src="https://getpocket.com/i/apple-touch-icon/Pocket_AppIcon_144.png" height="24" /> Connect to Pocket</a>
-                        </div>
-                    </div>
-                    <div class="authorized">
-                        <h3>Awesome, <span>user</span>!</h3>
-                        <form method="post" action="https://minute-pocket.appspot.com/queue">
-                            <div>
-                                <label for="form-email">Please indicate your email</label>
-                                <input type="email" name="email" placeholder="i-am-awesome@best.org" class="u-full-width" id="form-email" required focus />
-                                <p class="help-block">We will send you an email once the processing is complete.</p>
-                                <p class="error" style="display:none; margin-bottom: 20px">Please indicate a valid email.</p>
-                            </div>
-                            <div>
-                                <input class="pocket-btn" type="submit" value="Submit">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="processing">
-                        <h3>Sweeeeeeet, it's queued!</h3>
-                        <p>Awesome! Thank you!</p>
-                        <p>We will start processing your list soon, and will notify you with an email once it's done!</p>
-                    </div>
-                </div>
+<head>
+    <title>MinutePocket — Estimate reading time for Pocket articles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="MinutePocket will calculate the reading time for each of your articles and add tags next to it. It just takes a second to add, and it’s 100% free.">
+    <link rel="stylesheet" href="general.css" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="container">
+                <svg width="159" height="29" viewBox="0 0 159 29" xmlns="http://www.w3.org/2000/svg" class="logo">
+                    <g fill="#EF4056" fill-rule="evenodd">
+                        <path d="M29.12 0H2.8C1.055.115 0 1.117 0 2.9V13.57C0 22.242 8.564 29.054 15.973 29 24.303 28.938 32 21.857 32 13.572V2.9C32 1.11 30.877.1 29.12 0zm-9.856 20.485c-.605.61-1.587.612-2.194.003 0-.002 0-.002-.002-.003L13.04 16.43c-.29-.292-.452-.69-.452-1.104V7.204c0-.862.695-1.562 1.55-1.562.857 0 1.552.7 1.552 1.562V14.7l3.575 3.6c.604.61.615 1.586 0 2.185z" fill-rule="nonzero" />
+                        <path d="M49.394 5.964h3.264l3.213 8.432 3.248-8.432h3.23V18h-2.04V8.004h-.034L56.62 18h-1.497l-3.655-9.996h-.034V18h-2.04V5.964zM64.932 9.84h2.04V18h-2.04V9.84zm-.29-2.77c0-.33.123-.616.367-.86.242-.243.55-.365.925-.365.374 0 .688.116.944.35.254.23.38.523.38.874 0 .35-.126.642-.382.874-.255.233-.57.35-.943.35-.374 0-.683-.123-.927-.367-.243-.243-.365-.53-.365-.858zm4.676 2.77h1.938v1.31h.034c.193-.41.487-.763.884-1.064.397-.3.935-.45 1.615-.45.543 0 1.005.09 1.384.272.38.18.69.42.927.714.24.295.41.635.51 1.02.103.385.154.788.154 1.207V18h-2.04v-4.13c0-.228-.01-.48-.034-.757-.023-.278-.082-.54-.178-.782-.097-.243-.247-.447-.45-.61-.205-.166-.483-.248-.834-.248-.34 0-.626.057-.858.17-.233.113-.425.266-.58.46-.152.192-.262.413-.33.662-.068.25-.102.51-.102.782V18h-2.04V9.84zM86.522 18h-1.938v-1.31h-.034c-.193.41-.487.763-.884 1.063-.397.3-.935.45-1.615.45-.543 0-1.005-.087-1.385-.262-.38-.175-.688-.413-.926-.713-.24-.3-.41-.644-.51-1.03-.103-.384-.154-.787-.154-1.206V9.84h2.04v4.13c0 .228.01.48.034.757.023.278.082.54.178.782.097.243.244.447.442.612.2.164.48.246.842.246.34 0 .626-.057.86-.17.23-.113.423-.266.577-.46.152-.192.262-.413.33-.662.068-.25.102-.51.102-.782V9.84h2.04V18zm1.36-6.426V9.84h1.683V7.477h2.04V9.84h2.244v1.734h-2.245v3.57c0 .408.076.73.23.97.153.237.456.356.91.356.18 0 .38-.02.594-.06.214-.04.384-.104.51-.195v1.717c-.216.102-.48.173-.79.213-.313.04-.588.06-.826.06-.544 0-.99-.06-1.334-.18-.346-.12-.618-.3-.817-.543-.198-.244-.334-.547-.407-.91-.074-.363-.11-.782-.11-1.258v-3.74H87.88zm9.197 3.06c.067.612.305 1.088.713 1.428.408.34.9.51 1.48.51.51 0 .937-.105 1.282-.314.346-.21.65-.474.91-.79l1.462 1.104c-.476.59-1.01 1.01-1.598 1.258-.59.25-1.208.374-1.854.374-.612 0-1.19-.102-1.734-.306-.544-.204-1.014-.493-1.41-.867-.398-.373-.712-.823-.944-1.35-.233-.528-.35-1.114-.35-1.76 0-.646.117-1.232.35-1.76.232-.527.546-.977.943-1.35.398-.375.868-.664 1.412-.868.544-.204 1.122-.306 1.734-.306.567 0 1.085.1 1.555.298.472.198.874.484 1.21.858.333.374.593.836.78 1.386.188.55.28 1.18.28 1.895v.56h-6.22zm4.18-1.53c-.01-.6-.197-1.074-.56-1.42-.363-.345-.867-.518-1.513-.518-.612 0-1.096.176-1.453.527-.358.35-.576.822-.655 1.41h4.18zm4.132-7.14h4.046c.578 0 1.136.057 1.674.17.54.113 1.012.303 1.42.57.408.266.734.623.978 1.07.243.448.365 1.006.365 1.675 0 .758-.13 1.37-.39 1.835-.262.465-.613.824-1.055 1.08-.442.255-.955.427-1.54.518-.582.09-1.19.136-1.826.136h-1.53V18h-2.142V5.964zm3.434 5.22c.306 0 .623-.012.952-.035.33-.024.632-.092.91-.205.277-.113.504-.283.68-.51.175-.227.263-.544.263-.952 0-.374-.078-.67-.237-.893-.16-.22-.363-.39-.612-.51-.248-.12-.526-.195-.832-.23-.306-.033-.6-.05-.884-.05h-1.53v3.383h1.292zm6.358 2.736c0-.646.116-1.232.35-1.76.23-.527.545-.977.942-1.35.397-.375.867-.664 1.41-.868.545-.204 1.123-.306 1.735-.306.613 0 1.19.102 1.735.306.544.204 1.014.493 1.41.867.398.373.712.823.945 1.35.232.528.348 1.114.348 1.76 0 .646-.116 1.232-.35 1.76-.23.527-.545.977-.942 1.35-.397.375-.867.664-1.41.868-.545.204-1.123.306-1.735.306-.61 0-1.19-.102-1.733-.306-.544-.204-1.014-.493-1.41-.867-.398-.373-.712-.823-.945-1.35-.232-.528-.348-1.114-.348-1.76zm2.04 0c0 .317.054.623.16.918.11.295.268.555.478.782.21.227.46.408.756.544.295.136.63.204 1.003.204.375 0 .71-.068 1.004-.204.295-.136.547-.317.757-.544.21-.227.37-.487.477-.782.107-.295.16-.6.16-.918 0-.317-.053-.623-.16-.918-.108-.295-.267-.555-.477-.782-.21-.227-.46-.408-.756-.544-.295-.136-.63-.204-1.003-.204-.373 0-.707.068-1.002.204-.295.136-.547.317-.756.544-.21.227-.37.487-.477.782-.107.295-.16.6-.16.918zm14.314-1.632c-.238-.25-.487-.448-.748-.595-.26-.147-.527-.22-.8-.22-.373 0-.707.067-1.002.203-.295.136-.547.317-.756.544-.21.227-.37.487-.477.782-.107.295-.16.6-.16.918 0 .317.053.623.16.918.108.295.267.555.477.782.21.227.46.408.756.544.295.136.63.204 1.003.204.318 0 .613-.065.885-.195s.504-.32.697-.57l1.36 1.462c-.204.204-.44.38-.706.527-.266.147-.535.266-.807.357-.273.09-.534.155-.783.195-.25.04-.465.06-.646.06-.61 0-1.19-.103-1.733-.307-.544-.204-1.014-.493-1.41-.867-.398-.373-.712-.823-.944-1.35-.233-.528-.35-1.114-.35-1.76 0-.646.117-1.232.35-1.76.232-.527.546-.977.943-1.35.397-.375.867-.664 1.41-.868.545-.204 1.123-.306 1.735-.306.522 0 1.046.1 1.573.298.528.198.99.512 1.386.943l-1.412 1.41zm2.618-7.14h2.04v8.075l3.145-3.383h2.62l-3.503 3.706L142.18 18h-2.703l-3.247-4.165h-.034V18h-2.04V5.148zm10.76 9.486c.07.612.307 1.088.715 1.428.41.34.902.51 1.48.51.51 0 .938-.105 1.283-.314.346-.21.65-.474.91-.79l1.462 1.104c-.476.59-1.01 1.01-1.598 1.258-.59.25-1.207.374-1.853.374-.612 0-1.19-.102-1.734-.306-.544-.204-1.014-.493-1.41-.867-.398-.373-.712-.823-.944-1.35-.233-.528-.35-1.114-.35-1.76 0-.646.117-1.232.35-1.76.232-.527.546-.977.943-1.35.396-.375.866-.664 1.41-.868.544-.204 1.122-.306 1.734-.306.567 0 1.085.1 1.555.298.47.198.872.484 1.207.858.334.374.594.836.78 1.386.19.55.282 1.18.282 1.895v.56h-6.223zm4.183-1.53c-.012-.6-.2-1.074-.562-1.42-.363-.345-.867-.518-1.513-.518-.612 0-1.096.176-1.454.527-.356.35-.574.822-.653 1.41h4.182zm2.99-1.53V9.84h1.684V7.477h2.04V9.84h2.244v1.734h-2.244v3.57c0 .408.076.73.23.97.153.237.456.356.91.356.18 0 .38-.02.594-.06.215-.04.385-.104.51-.195v1.717c-.215.102-.48.173-.79.213-.312.04-.587.06-.825.06-.544 0-.99-.06-1.335-.18s-.617-.3-.816-.543c-.198-.244-.334-.547-.407-.91-.074-.363-.11-.782-.11-1.258v-3.74h-1.684z" />
+                    </g>
+                </svg>
+                <h1>Get the estimated reading time <br/>for your Pocket articles</h1>
+                <p>MinutePocket will calculate the reading time for each of your articles and add tags next to it. It just takes a second to add, and it’s 100% free.</p>
+                <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="button">Connect to Pocket</a>
+
+            </div>
+        </header>
+        <div class="visual">
+            <div class="container">
+                <img src="minutepocket-estimate-pocket-reading-time-for-free.png" alt="Get estimated reading time for pocket" />
+                <ul class="tag__wrapper">
+                    <li class="tag tag--big" id="tag__topleft">5 minutes</li>
+                    <li class="tag tag--small" id="tag__bottomleft">2 minutes</li>
+                    <li class="tag tag--small" id="tag__topright">3 minutes</li>
+                    <li class="tag tag--big" id="tag__bottomright">7 minutes</li>
+                </ul>
             </div>
         </div>
-        <div class="u-cf"></div>
-        <footer class="container">
-            <p><small>
-                Just for your information, I'm not responsible of any problems that could emerge from this.<br />
-                The API only uses <em>GET</em> and <em>SEND</em> (with action "tags_add"), that's all. No deletion is made.
-            </small></p>
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="./general.js"></script>
-    </body>
+    </main>
+    <section class="responses hide">
+        <div class="alert alert__unauthorized">
+            <strong>Connection error</strong>
+            <p class="error">An error occured while trying to connect to Pocket.</p>
+            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="button">Try to Connect to Pocket again</a>
+        </div>
+        <div class="alert alert__authorized">
+            <strong>Awesome, it works!</strong>
+            <form method="post" action="https://minute-pocket.appspot.com/queue">
+                <div>
+                    <input type="email" name="email" placeholder="Enter your email" class="u-full-width" id="form-email" required focus />
+                    <p class="error" style="display:none; margin-bottom: 20px">Please indicate a valid email.</p>
+                </div>
+                <div>
+                    <input class="button" type="submit" value="Get notified when it's ready">
+                </div>
+            </form>
+        </div>
+        <div class="alert alert__processing">
+            <h3>Sweeeeeeet! Give us a few minutes to process this.</h3>
+            <p>Awesome, thank you! We will start processing your list soon, and will notify you by email once it's done.</p>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./general.js"></script>
+</body>
+
 </html>
