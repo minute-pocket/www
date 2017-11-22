@@ -178,3 +178,87 @@ p {
         margin-left: 100%;
     }
 }
+.clear {
+    clear: both;
+}
+@media (max-width: 760px) {
+    .container {
+        padding: 0 40px;
+    }
+    .logo {
+        margin: 0 auto 30px auto;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .tag__wrapper {
+        display: none;
+    }
+    .responses .alert div {
+        width: 100%;
+    }
+    .responses .alert__authorized div input {
+        width: 100%;
+        margin: 0;
+    }
+    .responses .alert__authorized div .button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+.responses .alert {
+    padding: 40px;
+    background: #8BC34A;
+    color: #fff;
+    position: relative;
+    width: 100%;
+}
+.responses .alert p {
+    color: #fff;
+}
+.responses .alert h3 {
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 0;
+}
+.responses .alert input {
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    padding: 0 20px;
+    font-size: 12px;
+    background: none;
+    border: 2px solid #ffffff6e;
+    color: #fff;
+    width: 200px;
+    outline: none;
+}
+.responses form {
+    width: 100%;
+    max-width: 425px;
+    margin: 30px auto;
+}
+.responses form div {
+    float: left;
+}
+.responses .alert .button {
+    margin-top: 0;
+    margin-left: 20px;
+    background: #fff;
+    color: #8BC34A;
+    display: inline-block;
+    border: none;
+}
+.responses .alert__unauthorized {
+    background: #f44336;
+}
+.responses .alert__unauthorized .button {
+    color: #f44336;
+    font-size: 12px;
+    float: none;
+    clear: both;
+    width: 250px;
+    display: block;
+    margin: 30px auto 0 auto;
+}

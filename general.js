@@ -9,15 +9,12 @@ jQuery(function ($) {
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 
-    $('#raccoon>div').hide();
-
     state = getParameterByName('status') || 'intro';
-    $('#raccoon>.' + state).fadeIn(250);
+    $('.responses>.alert__' + state).slideDown(500);
 
     if (state === 'authorized') {
-        $('#raccoon>.authorized h3>span').text(getParameterByName('username') || 'John Doe');
         if (getParameterByName('error')) {
-            $('#raccoon>.authorized form .error').show();
+            $('.responses>.alert__authorized form .error').show();
         }
     }
 })

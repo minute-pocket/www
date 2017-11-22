@@ -7,9 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="MinutePocket will calculate the reading time for each of your articles and add tags next to it. It just takes a second to add, and it’s 100% free.">
     <link rel="stylesheet" href="general.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/manifest.json">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="msapplication-config" content="/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
+    <section class="responses">
+        <div class="alert alert__unauthorized" style="display:none;">
+            <h3>Connection error</h3>
+            <p>An error occured while trying to connect to Pocket.</p>
+            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="button">Try to Connect to Pocket again</a>
+        </div>
+        <div class="alert alert__authorized" style="display:none;">
+            <h3>Awesome, it works!</h3>
+            <p>Leave your email below to get notified when it's ready.</p>
+            <form method="post" action="https://minute-pocket.appspot.com/queue">
+                <div>
+                    <input type="email" name="email" placeholder="Enter your email" class="u-full-width" id="form-email" required focus />
+                    <p class="error" style="display:none; margin-bottom: 20px">Please indicate a valid email.</p>
+                </div>
+                <div>
+                    <input class="button" type="submit" value="Get notified when it's ready">
+                </div>
+            </form>
+            <div class="clear"></div>
+        </div>
+        <div class="alert alert__processing" style="display:none;">
+            <h3>Sweeeeeeet! Give us a few minutes to process this.</h3>
+            <p>Awesome, thank you! We will start processing your list soon, and will notify you by email once it's done.</p>
+        </div>
+    </section>
     <main>
         <header>
             <div class="container">
@@ -37,29 +70,6 @@
             </div>
         </div>
     </main>
-    <section class="responses hide">
-        <div class="alert alert__unauthorized">
-            <strong>Connection error</strong>
-            <p class="error">An error occured while trying to connect to Pocket.</p>
-            <a href="https://minute-pocket.appspot.com/connect" title="Click here to connect your account to Pocket" class="button">Try to Connect to Pocket again</a>
-        </div>
-        <div class="alert alert__authorized">
-            <strong>Awesome, it works!</strong>
-            <form method="post" action="https://minute-pocket.appspot.com/queue">
-                <div>
-                    <input type="email" name="email" placeholder="Enter your email" class="u-full-width" id="form-email" required focus />
-                    <p class="error" style="display:none; margin-bottom: 20px">Please indicate a valid email.</p>
-                </div>
-                <div>
-                    <input class="button" type="submit" value="Get notified when it's ready">
-                </div>
-            </form>
-        </div>
-        <div class="alert alert__processing">
-            <h3>Sweeeeeeet! Give us a few minutes to process this.</h3>
-            <p>Awesome, thank you! We will start processing your list soon, and will notify you by email once it's done.</p>
-        </div>
-    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="./general.js"></script>
 </body>
