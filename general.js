@@ -16,5 +16,9 @@ jQuery(function ($) {
         if (getParameterByName('error')) {
             $('.responses>.alert__authorized form .error').show();
         }
+        var email = getParameterByName('email');
+        if (email) {
+            $('#form-email').val(email);
+        }
     }
 })
