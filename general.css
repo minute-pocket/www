@@ -262,3 +262,18 @@ p {
     display: block;
     margin: 30px auto 0 auto;
 }
+.responses .alert p {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 9999;
+    padding: 23px;
+    border: none;
+    border-radius: 0;
+    background: #f54336;
+    color:#fff;
+}
